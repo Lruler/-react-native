@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet} from 'react-native';
 import footImg1 from '../static/1.png';
 import footImg2 from '../static/2.png';
 import footImg3 from '../static/3.png';
