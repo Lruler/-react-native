@@ -10,6 +10,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
 import Carouse from './src/components/Carouse';
+import Footer from './src/components/Footer';
 
 const Demo = ['blue', 'yellow', 'black'];
 
@@ -23,7 +24,9 @@ const App = () => {
         <Carouse images={Demo} />
       </View>
       <View style={styles.contentContainer} />
-      <View style={styles.footerContainer} />
+      <View style={styles.footerContainer}>
+        <Footer />
+      </View>
     </SafeAreaView>
   );
 };
@@ -44,13 +47,13 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   contentContainer: {
-    height: 500,
+    height: 530,
     width: '100%',
   },
   footerContainer: {
     width: '100%',
-    backgroundColor: 'black',
-    height: 80,
+    backgroundColor: 'rgb(245,245,245)',
+    height: 'auto',
   },
 });
 
