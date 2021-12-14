@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
-import footImg1 from '../static/1.png';
-import footImg2 from '../static/2.png';
-import footImg3 from '../static/3.png';
+import footImg1 from '../static/table.png';
+import footImg2 from '../static/book.png';
+import footImg1Ed from '../static/tabled.png';
+import footImg2Ed from '../static/booked.png';
 
 const Footer = () => {
+  const [clicked, setClicked] = useState([true, ...Array(3).fill(false)]);
+  const handleTouch = () => {
+    console.warn(111);
+  };
   return (
     <View style={styles.footerContainer}>
-      <View style={styles.imageContainer}>
+      <View style={styles.imageContainer} onTouchStart={handleTouch}>
         <Image style={styles.image} source={footImg1} />
         <Text>主页</Text>
       </View>
@@ -16,7 +21,7 @@ const Footer = () => {
         <Text>课程</Text>
       </View>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={footImg3} />
+        <Image style={styles.image} source={footImg1} />
         <Text>工具</Text>
       </View>
       <View style={styles.imageContainer}>
