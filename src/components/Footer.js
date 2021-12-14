@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, Text, StyleSheet} from 'react-native';
 import footImg1 from '../static/1.png';
 import footImg2 from '../static/2.png';
 import footImg3 from '../static/3.png';
@@ -7,24 +7,39 @@ import footImg3 from '../static/3.png';
 const Footer = () => {
   return (
     <View style={styles.footerContainer}>
-      <Image style={styles.image} source={footImg1} />
-      <Image style={styles.image} source={footImg2} />
-      <Image style={styles.image} source={footImg3} />
-      <Image style={styles.image} source={footImg2} />
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={footImg1} />
+        <Text>主页</Text>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={footImg2} />
+        <Text>课程</Text>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={footImg3} />
+        <Text>工具</Text>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={footImg2} />
+        <Text>我的</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   footerContainer: {
-    width: '100%',
-    height: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
+    height: 100,
+  },
+  imageContainer: {
+    alignItems: 'center',
   },
   image: {
     height: 70,
     width: 70,
+    marginBottom: -10,
   },
 });
 
